@@ -39,12 +39,15 @@ async function process() {
 
     //const price = closes[0];
     console.log(rsi); 
-    if(rsi > 70 && bougth)
+    if(rsi > 70 && bougth) {
         console.log("Sobrecomprado!");
         bougth = false;
-    else if(rsi < 30 && !bougth)
+    }
+    else if(rsi < 30 && !bougth) {
         console.log("Sobrevendido!");
         bougth = true;
+    }
+       
 }
 setInterval(process, 60000);
 
